@@ -62,6 +62,13 @@ class ApiClient {
     return this._request(`/api/projects/${encodeURIComponent(projectId)}`);
   }
 
+  async updateProject(projectId, updates) {
+    return this._request(`/api/projects/${encodeURIComponent(projectId)}`, {
+      method: 'PUT',
+      body: JSON.stringify(updates),
+    });
+  }
+
   async updateGate(projectId, gateName, { status, notes = '' }) {
     return this._request(`/api/projects/${encodeURIComponent(projectId)}/gates/${encodeURIComponent(gateName)}`, {
       method: 'POST',
@@ -131,10 +138,10 @@ class ApiClient {
   }
 
   // Vision & Assets
-  async headlessCrop({ src_path, dest_path, top_crop_ratio = 0.22 }) {
+  async headlessCrop({ src_path = null, dest_path, top_crop_ratio = 0.22, data_url = null, character_handle = '@character' }) {
     return this._request('/api/assets/headless-crop', {
       method: 'POST',
-      body: JSON.stringify({ src_path, dest_path, top_crop_ratio }),
+      body: JSON.stringify({ src_path, dest_path, top_crop_ratio, data_url, character_handle }),
     });
   }
 

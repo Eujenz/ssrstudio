@@ -5,8 +5,11 @@ from pydantic import BaseModel, Field
 from app.core.workspace import WorkspaceManager
 from app.models.project import (
     ApprovalGateStatus,
+    CharacterAsset,
     ContinuityLocks,
+    LocationAsset,
     ProjectState,
+    PropAsset,
     ShotSpec,
     SpatialNode,
     StoryFunnel,
@@ -27,6 +30,15 @@ class CreateProjectRequest(BaseModel):
     idea: str = ""
     funnel: Optional[StoryFunnel] = None
     shots: Optional[List[ShotSpec]] = None
+
+
+class ProjectUpdateRequest(BaseModel):
+    title: Optional[str] = None
+    idea: Optional[str] = None
+    funnel: Optional[StoryFunnel] = None
+    characters: Optional[List[CharacterAsset]] = None
+    locations: Optional[List[LocationAsset]] = None
+    props: Optional[List[PropAsset]] = None
 
 
 class GateUpdateRequest(BaseModel):
@@ -76,6 +88,33 @@ def get_project(project_id: str, request: Request):
         return ws.load_project(project_id)
     except FileNotFoundError:
         raise HTTPException(status_code=404, detail=f"Project {project_id} not found")
+
+
+@router.put("/{project_id}", response_model=ProjectState)
+async def update_project(project_id: str, req: ProjectUpdateRequest, request: Request):
+    """Update project funnel, characters, locations, or props."""
+    ws = get_workspace(request)
+    if not ws.project_exists(project_id):
+        raise HTTPException(status_code=404, detail=f"Project {project_id} not found")
+
+    project = ws.load_project(project_id)
+    if req.title is not None:
+        project.title = req.title
+    if req.idea is not None:
+        project.idea = req.idea
+    if req.funnel is not None:
+        project.funnel = req.funnel
+    if req.characters is not None:
+        project.characters = req.characters
+    if req.locations is not None:
+        project.locations = req.locations
+    if req.props is not None:
+        project.props = req.props
+
+    ws.save_project(project)
+    ws.log_event(project_id, "project_updated", {"project_id": project_id})
+    await broadcast_event("project_updated", {"project_id": project_id})
+    return project
 
 
 @router.post("/{project_id}/gates/{gate_name}", response_model=ProjectState)

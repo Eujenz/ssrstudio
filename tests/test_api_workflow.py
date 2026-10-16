@@ -172,3 +172,27 @@ def test_api_workflow_end_to_end(tmp_path: Path):
     assert tl_data["manifest"]["total_shots"] == 3
     assert "ffmpeg" in tl_data["ffmpeg_command"]
     assert tl_data["manifest"]["project_id"] == project_id
+
+    # 14. Update project funnel and assets via PUT /api/projects/{project_id}
+    put_proj_res = client.put(f"/api/projects/{project_id}", json={
+        "funnel": {
+            "genre_tone": "Cyberpunk Neo-Noir 2.39:1",
+            "world_reality": "High-gravity rain-slicked industrial sector",
+            "core_conflict": "Escape before lockdown",
+            "protagonist_arc": "From defensive hesitation to decisive counter-strike",
+            "visual_motif": "Sodium vapor orange against cyan neon reflections"
+        }
+    })
+    assert put_proj_res.status_code == 200
+    assert put_proj_res.json()["funnel"]["genre_tone"] == "Cyberpunk Neo-Noir 2.39:1"
+
+    # 15. One-click schematic headless cropper without src_path
+    auto_crop_dest = tmp_path / "schematic_headless.png"
+    auto_crop_res = client.post("/api/assets/headless-crop", json={
+        "out_path": str(auto_crop_dest),
+        "crop_top_ratio": 0.22,
+        "character_handle": "@roco"
+    })
+    assert auto_crop_res.status_code == 200
+    assert auto_crop_dest.exists()
+

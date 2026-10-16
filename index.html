@@ -3,73 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SSRStudio v2 — Industrial Guided AI Video Framework</title>
+  <title>SSRStudio v2 — 引導式高品質 AI 電影分鏡與提示詞工程工作台</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  <!-- SSRStudio v2 Modular Studio CSS -->
+  <!-- SSRStudio v2 Commercial UI CSS -->
   <link rel="stylesheet" href="/web/css/studio.css">
 </head>
 <body>
 
-  <!-- Top Navigation & Mode Switcher -->
+  <!-- Top Navigation Header -->
   <header class="studio-header">
     <div class="studio-brand">
-      <span style="font-size: 1.5rem;">🎬</span>
+      <span style="font-size: 1.6rem;">🎬</span>
       <div>
-        <div class="studio-logo-text">SSRSTUDIO v2</div>
-        <div style="font-size: 0.65rem; font-family: var(--font-mono); color: var(--text-dim); letter-spacing: 0.05em;">
-          INDUSTRIAL AI VIDEO PIPELINE
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span class="studio-logo-text">SSRSTUDIO v2</span>
+          <span class="studio-version-tag">COMMERCIAL UX 2.1</span>
+        </div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">
+          引導式 AI 電影分鏡、資產防禦與決定論提示詞工作台
         </div>
       </div>
-      <span class="studio-version-tag">STABLE 2.0</span>
     </div>
 
-    <!-- Mode Switcher -->
-    <div class="mode-switcher">
-      <button type="button" class="mode-btn active" id="btn-mode-guided">
-        <span>✨ 導演引導模式</span>
-        <span style="opacity: 0.7; font-size: 0.72rem;">(Guided Mode)</span>
-      </button>
-      <button type="button" class="mode-btn" id="btn-mode-tactical">
-        <span>🎛️ 專家戰術控制台</span>
-        <span style="opacity: 0.7; font-size: 0.72rem;">(Pro Tactical)</span>
+    <!-- Center: Project Switcher & Quick Onboarding Button -->
+    <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 0.4rem; background: var(--bg-surface); padding: 0.3rem 0.6rem; border-radius: 8px; border: 1px solid var(--border-dim);">
+        <span style="font-size: 0.75rem; color: var(--text-muted); white-space: nowrap;">📁 當前專案：</span>
+        <select id="header-project-select" class="wizard-select" style="padding: 0.25rem 0.6rem; font-size: 0.82rem; width: auto; min-width: 210px; border: none; background: transparent;">
+          <option value="">載入專案清單中...</option>
+        </select>
+      </div>
+
+      <button type="button" class="btn-secondary" id="btn-toggle-onboarding" style="padding: 0.45rem 0.85rem; font-size: 0.8rem; border-color: rgba(6, 182, 212, 0.4); color: var(--accent-cyan);">
+        📖 30 秒看懂操作流程 & 真實引擎說明
       </button>
     </div>
 
-    <!-- Right Status & Project Selector -->
+    <!-- Right: View Layout Switcher & Live Engine Status -->
     <div class="header-status">
-      <select id="header-project-select" class="wizard-select" style="padding: 0.3rem 0.8rem; font-size: 0.78rem; width: auto;">
-        <option value="">載入專案清單中...</option>
-      </select>
+      <div class="mode-switcher" title="切換單步引導或全開總覽">
+        <button type="button" class="mode-btn active" id="btn-layout-step">
+          <span>🧭 分步引導模式</span>
+        </button>
+        <button type="button" class="mode-btn" id="btn-layout-all">
+          <span>🖥️ 全景專家總覽</span>
+        </button>
+      </div>
 
-      <div class="sse-badge">
+      <div class="sse-badge" title="與本地 Python FastAPI 後端即時連線狀態">
         <span class="sse-dot" id="sse-status-dot"></span>
-        <span id="sse-status-text">SSE CONNECTING</span>
+        <span id="sse-status-text">後端連線中</span>
       </div>
     </div>
   </header>
 
   <!-- Main Studio Workspace -->
   <main class="studio-main">
-    
-    <!-- Guided Mode View (Guided Director Wizard) -->
-    <section id="view-wizard-container" style="display: block; margin-bottom: 2rem;">
-      <!-- Populated by GuidedWizard component -->
+
+    <!-- Collapsible Onboarding & Transparency Banner (Clear Real vs External Explanation) -->
+    <section id="onboarding-banner" class="onboarding-drawer" style="display: block;">
+      <div class="onboarding-header">
+        <div>
+          <h2 style="font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
+            <span>💡 歡迎使用 SSRStudio v2！為什麼做高品質 AI 影片需要這 5 個步驟？</span>
+          </h2>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 0.2rem;">
+            如果直接把一句話丟給 AI 影片模型（如 Seedance、Kling、Runway），常會遇到「每一鏡主角長相衣服都變、手拿武器穿模、畫面亂轉」的問題。本系統把好萊塢 AI 製片流程拆成 **5 個清楚的防呆步驟**，帶你一步步產出不會崩壞的分鏡包。
+          </p>
+        </div>
+        <button type="button" class="btn-secondary" id="btn-close-onboarding" style="padding: 0.3rem 0.7rem; font-size: 0.75rem; white-space: nowrap;">
+          ✕ 收合導覽
+        </button>
+      </div>
+
+      <div class="grid-2" style="margin-top: 0.9rem;">
+        <div class="transparency-card real-engine">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <span class="engine-badge real">🟢 100% 本地真實運作 (Python 引擎即時運算)</span>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-main); line-height: 1.55;">
+            畫面上標示 <strong>🟢 本地真實運算</strong> 的功能，點擊後都會<strong>立刻執行 Python 演算法並寫入硬碟</strong>（位於 <code>projects/&lt;專案ID&gt;/</code>）：
+          </p>
+          <ul style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem; padding-left: 1.2rem; line-height: 1.6;">
+            <li><strong>Step 1 劇本與分鏡拆解</strong>：根據你的創意自動生成 5 大故事設定、角色服裝/聲音鎖與多顆分鏡。</li>
+            <li><strong>Step 2 無頭三視圖裁切</strong>：用 Pillow 真正切掉角色立繪頂部 22% 頭部並存成 PNG，防止小臉糊化。</li>
+            <li><strong>Step 3 2D 雷達座標 & 2.39:1 分鏡板繪製</strong>：拖曳圓點即時換算公尺距離；用 Pillow 繪製 <code>1920×804</code> 構圖預覽圖；紅箭頭畫布直接存成參考圖 PNG。</li>
+            <li><strong>Step 4 20 點工業品管 (QA) & 自動修復</strong>：真正用正規表示式抓出模糊詞（如 <code>near</code>、<code>sad</code>）並一鍵修補到 20/20 滿分。</li>
+          </ul>
+        </div>
+
+        <div class="transparency-card export-engine">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <span class="engine-badge export">📤 產出物匯出 / 預留外部付費 API 插槽</span>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-main); line-height: 1.55;">
+            依照目前的架構設定，我們<strong>不強制綁定任何昂貴的外部付費 API Key</strong>。當你走完 Step 1～Step 5 後，你會拿到：
+          </p>
+          <ul style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem; padding-left: 1.2rem; line-height: 1.6;">
+            <li><strong>通過 20 點檢驗的雙模提示詞合約</strong>（<code>Seedance 2.5 10-Section</code> 與 <code>15-Block</code>）：可直接點「複製提示詞」貼到 Seedance、Kling、Runway 或可靈網頁版生成影片。</li>
+            <li><strong>鎖定好的參考圖檔</strong>（無頭三視圖、紅箭頭道具接觸圖、2.39:1 構圖板）：直接保存在你的專案資料夾 <code>renders/</code> 供上傳作為首幀參考圖 (First Frame / Character Ref)。</li>
+            <li><strong>救援診斷與 FFmpeg 剪輯腳本</strong>：若外部模型生壞了，在 Step 5 診斷原因或自動插入 0.8 秒特寫橋接鏡。</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- Pro Tactical Mode Canvases (Radar + Prop Pre-comp) -->
-    <section id="view-tactical-canvases" class="grid-2" style="display: none; margin-bottom: 2rem;">
-      <div id="tactical-radar-container"></div>
-      <div id="tactical-prop-container"></div>
+    <!-- 5-Step Interactive Pipeline Stepper Bar -->
+    <nav class="pipeline-stepper" id="pipeline-stepper-bar" aria-label="製片五步驟導航">
+      <button type="button" class="step-item active" data-step="1">
+        <div class="step-num">1</div>
+        <div class="step-info">
+          <div class="step-title">💡 故事與企劃展開</div>
+          <div class="step-sub">一句話生成分鏡與世界觀</div>
+        </div>
+        <span class="step-gate-pill" id="stepper-gate-1">待確認</span>
+      </button>
+
+      <div class="step-connector">→</div>
+
+      <button type="button" class="step-item" data-step="2">
+        <div class="step-num">2</div>
+        <div class="step-info">
+          <div class="step-title">🎭 角色與場景資產鎖定</div>
+          <div class="step-sub">鎖定服裝/聲音/無頭三視圖</div>
+        </div>
+        <span class="step-gate-pill" id="stepper-gate-2">待確認</span>
+      </button>
+
+      <div class="step-connector">→</div>
+
+      <button type="button" class="step-item" data-step="3">
+        <div class="step-num">3</div>
+        <div class="step-info">
+          <div class="step-title">📐 分鏡走位與紅箭頭預合成</div>
+          <div class="step-sub">2D雷達排站位 & 2.39:1預覽</div>
+        </div>
+        <span class="step-gate-pill" id="stepper-gate-3">待確認</span>
+      </button>
+
+      <div class="step-connector">→</div>
+
+      <button type="button" class="step-item" data-step="4">
+        <div class="step-num">4</div>
+        <div class="step-info">
+          <div class="step-title">🎬 物理演技與 20 點品管</div>
+          <div class="step-sub">去除抽象情緒詞 & 自動除錯</div>
+        </div>
+        <span class="step-gate-pill" id="stepper-gate-4">檢測中</span>
+      </button>
+
+      <div class="step-connector">→</div>
+
+      <button type="button" class="step-item" data-step="5">
+        <div class="step-num">5</div>
+        <div class="step-info">
+          <div class="step-title">🚀 提示詞匯出與失敗救援</div>
+          <div class="step-sub">複製合約 / 15次停損診斷室</div>
+        </div>
+        <span class="step-gate-pill" id="stepper-gate-5">最終產出</span>
+      </button>
+    </nav>
+
+    <!-- Global Shot Selector Bar (Visible on Steps 3, 4, 5 and Overview Mode) -->
+    <section id="global-shot-bar" style="display: none; margin-bottom: 1.25rem;">
+      <!-- Populated dynamically by BacklotBoard -->
     </section>
 
-    <!-- Backlot Multi-Shot Board & 4 Approval Gates -->
-    <section id="view-backlot-container">
-      <!-- Populated by BacklotBoard component -->
+    <!-- STEP 1 CONTAINER: Guided Wizard + Story Funnel Editor -->
+    <section id="step-panel-1" class="step-panel">
+      <div id="view-wizard-container"></div>
+      <div id="view-funnel-container" style="margin-top: 1.5rem;"></div>
+    </section>
+
+    <!-- STEP 2 CONTAINER: Asset Bible (Characters, Headless Cropper, Locations, Props) -->
+    <section id="step-panel-2" class="step-panel" style="display: none;">
+      <div id="view-assets-container"></div>
+    </section>
+
+    <!-- STEP 3 CONTAINER: Visual Blocking (Animatic Slate + 2D Spatial Radar + Red-Arrow Prop Canvas) -->
+    <section id="step-panel-3" class="step-panel" style="display: none;">
+      <div id="view-blocking-header"></div>
+      <div class="grid-2" style="margin-top: 1rem;">
+        <div id="view-slate-container"></div>
+        <div>
+          <!-- Sub-tabs for 2D Radar vs Red-Arrow Prop Canvas -->
+          <div class="tool-subtabs" style="margin-bottom: 0.75rem;">
+            <button type="button" class="tool-subtab active" id="tab-btn-radar">
+              🎯 工具 A：2D 空間雷達走位盤 (調整角色站位與鏡頭焦段)
+            </button>
+            <button type="button" class="tool-subtab" id="tab-btn-prop">
+              🛡️ 工具 B：#FF0000 紅箭頭道具接觸盤 (防止手拿武器穿模)
+            </button>
+          </div>
+          <div id="tactical-radar-container"></div>
+          <div id="tactical-prop-container" style="display: none;"></div>
+        </div>
+      </div>
+      <div id="view-step3-footer" style="margin-top: 1.5rem;"></div>
+    </section>
+
+    <!-- STEP 4 CONTAINER: Meisner Physical Acting + Real 20-Point QA Checklist -->
+    <section id="step-panel-4" class="step-panel" style="display: none;">
+      <div id="view-acting-qa-container"></div>
+    </section>
+
+    <!-- STEP 5 CONTAINER: Prompt Contract Export + Stop-Loss Rescue Doctor + Timeline Manifest -->
+    <section id="step-panel-5" class="step-panel" style="display: none;">
+      <div id="view-export-rescue-container"></div>
     </section>
 
   </main>
