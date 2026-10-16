@@ -138,10 +138,20 @@ class ApiClient {
   }
 
   // Vision & Assets
-  async headlessCrop({ src_path = null, dest_path, top_crop_ratio = 0.22, data_url = null, character_handle = '@character' }) {
+  async headlessCrop({ src_path = null, dest_path = null, out_path = null, top_crop_ratio = 0.22, crop_top_ratio = null, data_url = null, character_handle = '@character' }) {
+    const finalDest = dest_path || out_path;
+    const finalRatio = crop_top_ratio !== null ? crop_top_ratio : top_crop_ratio;
     return this._request('/api/assets/headless-crop', {
       method: 'POST',
-      body: JSON.stringify({ src_path, dest_path, top_crop_ratio, data_url, character_handle }),
+      body: JSON.stringify({
+        src_path,
+        dest_path: finalDest,
+        out_path: finalDest,
+        top_crop_ratio: finalRatio,
+        crop_top_ratio: finalRatio,
+        data_url,
+        character_handle,
+      }),
     });
   }
 

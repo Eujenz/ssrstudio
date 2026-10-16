@@ -310,21 +310,29 @@ export class BacklotBoard {
               </div>
 
               <!-- Interactive Headless Sheet Cropper Box -->
-              <div style="background: rgba(16, 185, 129, 0.06); border: 1px dashed rgba(16, 185, 129, 0.35); border-radius: 8px; padding: 0.75rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+              <div style="background: rgba(16, 185, 129, 0.06); border: 1px dashed rgba(16, 185, 129, 0.35); border-radius: 8px; padding: 0.85rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
                   <div>
-                    <div style="font-size: 0.8rem; font-weight: 700; color: #6ee7b7;">✂️ Pillow 無頭三視圖自動裁切器 (切除頂部 22% 臉部區)</div>
-                    <div style="font-size: 0.72rem; color: var(--text-muted);">點右側按鈕會立即由 Python Pillow 生成三視圖並切掉上緣 22%，存成真實 PNG。</div>
+                    <div style="font-size: 0.82rem; font-weight: 700; color: #6ee7b7;">✂️ Pillow 無頭三視圖自動裁切器 (自動切除頂部 22% 臉部)</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.15rem;">
+                      📁 <strong>預設儲存路徑：</strong>系統自動管理儲存於 <code>projects/${this.project.project_id}/assets/${c.handle.replace('@', '')}_headless.png</code>，無需手動填寫。
+                    </div>
                   </div>
-                  <button type="button" class="btn-secondary btn-run-headless-crop" data-char-idx="${idx}" style="border-color: rgba(16, 185, 129, 0.5); color: #6ee7b7; font-size: 0.76rem; padding: 0.35rem 0.75rem;">
-                    ✂️ 一鍵執行無頭三視圖裁切
-                  </button>
+                  <div style="display: flex; gap: 0.4rem; align-items: center;">
+                    <label class="btn-secondary" style="border-color: rgba(6, 182, 212, 0.4); color: var(--accent-cyan); font-size: 0.76rem; padding: 0.35rem 0.65rem; cursor: pointer;">
+                      📁 上傳自訂三視圖
+                      <input type="file" class="headless-file-input" data-char-idx="${idx}" accept="image/*" style="display: none;" />
+                    </label>
+                    <button type="button" class="btn-secondary btn-run-headless-crop" data-char-idx="${idx}" style="border-color: rgba(16, 185, 129, 0.5); color: #6ee7b7; font-size: 0.76rem; padding: 0.35rem 0.75rem;">
+                      ✂️ 一鍵執行無頭三視圖裁切
+                    </button>
+                  </div>
                 </div>
 
                 <div id="headless-preview-box-${idx}" style="margin-top: 0.6rem; ${c.headless_turnaround_path ? 'display: block;' : 'display: none;'}">
                   ${c.headless_turnaround_path ? `
                     <div style="font-size: 0.72rem; color: var(--accent-emerald); margin-bottom: 0.35rem;">
-                      ✅ 已產生無頭三視圖檔：<code>${this._esc(c.headless_turnaround_path)}</code>
+                      ✅ 已成功儲存至硬碟：<code>${this._esc(c.headless_turnaround_path)}</code>
                     </div>
                     <img src="/${c.headless_turnaround_path}?t=${Date.now()}" alt="Headless Turnaround" style="width: 100%; max-height: 170px; object-fit: contain; border-radius: 6px; border: 1px solid var(--border-dim); background: #090b10;" onerror="this.style.display='none';" />
                   ` : ''}
@@ -395,11 +403,25 @@ export class BacklotBoard {
       </div>
     `;
 
+    // Bind custom file upload inputs
+    el.querySelectorAll('.headless-file-input').forEach((input) => {
+      input.addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const idx = parseInt(input.getAttribute('data-char-idx'), 10);
+        const reader = new FileReader();
+        reader.onload = async (evt) => {
+          await this.handleRunHeadlessCrop(idx, evt.target.result);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+
     // Bind headless crop buttons
     el.querySelectorAll('.btn-run-headless-crop').forEach((btn) => {
       btn.addEventListener('click', async () => {
         const idx = parseInt(btn.getAttribute('data-char-idx'), 10);
-        await this.handleRunHeadlessCrop(idx);
+        await this.handleRunHeadlessCrop(idx, null);
       });
     });
 
@@ -421,7 +443,7 @@ export class BacklotBoard {
     }
   }
 
-  async handleRunHeadlessCrop(charIdx) {
+  async handleRunHeadlessCrop(charIdx, customDataUrl = null) {
     if (!this.project || !this.project.characters[charIdx]) return;
     const char = this.project.characters[charIdx];
     const cleanHandle = char.handle.replace('@', '');
@@ -430,9 +452,12 @@ export class BacklotBoard {
     this.onToast(`✂️ 正在使用 Python Pillow 為 ${char.name} 生成並裁切無頭三視圖...`);
     try {
       const res = await api.headlessCrop({
+        dest_path: outPath,
         out_path: outPath,
         crop_top_ratio: 0.22,
+        top_crop_ratio: 0.22,
         character_handle: char.handle,
+        data_url: customDataUrl,
       });
 
       char.headless_turnaround_path = res.cropped_path || outPath;
