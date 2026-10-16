@@ -1,0 +1,7 @@
+file 'projects\demo-hell-grind\renders\shot-01_slate.png'
+duration 10
+file 'projects\demo-hell-grind\renders\shot-02_slate.png'
+duration 10
+file 'projects\demo-hell-grind\renders\shot-03_slate.png'
+duration 10
+file 'projects\demo-hell-grind\renders\shot-03_slate.png'

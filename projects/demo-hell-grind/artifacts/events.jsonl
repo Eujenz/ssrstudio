@@ -1,3 +1,7 @@
 {"timestamp": "2026-10-16T08:20:33.452626+00:00", "event_type": "gate_status_updated", "project_id": "demo-hell-grind", "data": {"gate": "story_funnel", "status": "approved", "reason": "故事漏斗與視聽基調核准", "checkpoint": "20261016T082033Z_story_funnel.json"}}
 {"timestamp": "2026-10-16T08:20:33.472880+00:00", "event_type": "gate_status_updated", "project_id": "demo-hell-grind", "data": {"gate": "asset_bible", "status": "approved", "reason": "女武士無頭三視圖與斷刃太刀資產鎖定", "checkpoint": "20261016T082033Z_asset_bible.json"}}
 {"timestamp": "2026-10-16T08:20:33.496973+00:00", "event_type": "gate_status_updated", "project_id": "demo-hell-grind", "data": {"gate": "storyboard_blocking", "status": "approved", "reason": "3 鏡頭 2D 雷達走位與 2.39:1 分鏡 Slate 審批通過", "checkpoint": "20261016T082033Z_storyboard_blocking.json"}}
+{"timestamp": "2026-10-16T08:28:40.630765+00:00", "event_type": "shot_compiled", "project_id": "demo-hell-grind", "data": {"shot_id": "shot-01", "qa_passed": true, "qa_score": 20}}
+{"timestamp": "2026-10-16T08:28:54.471531+00:00", "event_type": "timeline_generated", "project_id": "demo-hell-grind", "data": {"total_shots": 3, "duration": 30}}
+{"timestamp": "2026-10-16T08:28:58.551662+00:00", "event_type": "timeline_generated", "project_id": "demo-hell-grind", "data": {"total_shots": 3, "duration": 30}}
+{"timestamp": "2026-10-16T08:29:04.085727+00:00", "event_type": "animatic_rendered", "project_id": "demo-hell-grind", "data": {"shot_id": "shot-01", "path": "C:\\Users\\p0282768\\Downloads\\ssrstudio\\projects\\demo-hell-grind\\renders\\shot-01_slate.png"}}
