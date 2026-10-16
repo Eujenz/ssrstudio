@@ -67,10 +67,10 @@ def create_app(projects_dir: Optional[Union[str, Path]] = None) -> FastAPI:
     # Mount projects static directory for serving rendered slates & assets
     app.mount("/projects", StaticFiles(directory=str(ws_dir)), name="projects")
 
-    # Mount web directory if it exists
+    # Mount web directory
     web_dir = BASE_DIR / "web"
-    if web_dir.is_dir():
-        app.mount("/web", StaticFiles(directory=str(web_dir)), name="web")
+    web_dir.mkdir(parents=True, exist_ok=True)
+    app.mount("/web", StaticFiles(directory=str(web_dir)), name="web")
 
     # 3. Root route serving index.html
     @app.get("/", response_class=HTMLResponse, tags=["system"])
