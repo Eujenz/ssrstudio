@@ -1,145 +1,257 @@
-# HELL GRIND Pipeline Studio
-### 剪紙繪本與導演工作台風格 • 工業級 AI 電影提示詞與管線架構系統
+# SSRStudio v2: Guided High-Quality Cinematic AI Video Framework
+### 工業級 AI 電影提示詞編譯器 • 雙模式導演引導工作台 • OpenMontage 相容架構
 > **Validated by the 2026 Cannes Feature Film *Hell Grind***  
-> Supported AI Models: **Seedance 2.0**, **Higgsfield Soul 2.0 / Soul Cinema**, **Nano Banana Pro (NBP)**, **Seedream 4.5**, and **GPT Image 2**.
+> Supported AI Models: **Seedance 2.0 / 2.5**, **Higgsfield Soul 2.0 / Soul Cinema**, **Nano Banana Pro (NBP)**, **Seedream 4.5**, and **GPT Image 2**.
 
 ---
 
-## 📖 簡介 (Introduction)
-**HELL GRIND Pipeline Studio** 是一套專為零基礎創作者與獨立電影導演打造的**互動式 AI 短片全流程架構工作台**。
+## 📖 系統簡介 (System Overview)
 
-本系統全盤收錄並工程化了坎城獲獎電影《Hell Grind》驗證的工業級電影製作法則，直擊 AI 視頻生成中最昂貴的六大死線災難：
-1. **全景臉漂 (Face Drift)**
-2. **空間瞬移 (Character Teleportation)**
-3. **死板眼神 (Dead Eyes)**
-4. **空氣抓握 (Mimed Manipulation)**
-5. **台詞亂動嘴 (Post-Line Filler-Babble)**
-6. **提示詞污染 (Prompt Pollution & Latent Hallucination)**
+**SSRStudio v2** 是一套結合好萊塢電影視聽語言、坎城獲獎實戰技法與現代 AI 視頻潛在空間特性的**工業級導向式 AI 電影創作框架**。
 
----
+傳統文字生視頻（Text-to-Video）面臨最致命的六大死線災難：
+1. **全景臉漂 (Face Drift)**：遠景模型隨機臆測五官。
+2. **空間瞬移 (Character Teleportation)**：鏡頭剪接後角色位置與視線對調。
+3. **死板眼神 (Dead Eyes)**：人物凝視虛空缺乏微眼跳與角膜反光。
+4. **空氣抓握 (Mimed Manipulation)**：手部與道具在空間中浮動、無實體接觸。
+5. **台詞亂動嘴 (Post-Line Filler-Babble)**：台詞結束後下顎持續不自主抽動。
+6. **提示詞污染 (Prompt Latent Hallucination)**：隨意更動詞彙導致畫面風格劇烈撕裂。
 
-## 🎨 視覺風格：剪紙繪本與導演工作台 (Tactile Paper-Cut Workbench)
-- **羊皮紙底色 (Parchment)**：`#f4ece1` 搭配手繪微格紋
-- **卡片紙質 (Card Surfaces)**：`#fbf7f0`
-- **墨黑邊框 (Ink Borders)**：`2.5px solid #25211e`
-- **硬邊紙雕陰影 (Paper-Cut Shadows)**：`6px 6px 0px #25211e`
-- **和紙膠帶飾帶 (Washi Tape Ribbons)**：
-  - 緋紅 (Crimson): `#b92b27`
-  - 晶藍 (Crystal Blue): `#2b7a9b`
-  - 暖金 (Warm Gold): `#d49a35`
-  - 鼠尾草綠 (Sage): `#4a6b5b`
-- **深邃黑曜石代碼終端 (Obsidian Terminals)**：`#1e1b18`
-- **雙語介面切換**：`雙語輔助 (BI)` / `純繁中介面 (ZH)` / `English UI (EN)`
+SSRStudio v2 汲取了 **Higgsfield Hell Grind** 的實戰無頭設定圖法則、**OpenMontage** 的分層 Agent Skills 與審批閘門架構，以及 **MoneyPrinterTurbo** 的輕量極速流水線設計，實現全流程**零打包依賴 (Zero-Build Vanilla ES Modules)**、**單一指令啟動**、**確定論 2.39:1 動態分鏡 Slate 生成**與 **100% 通過 20 點工業 QA** 的自動修復引擎。
 
 ---
 
-## 🧭 六大引導階段架構 (The 6 Guided Stages)
+## 🏛️ 系統架構與關鍵模式 (Architecture & Key Patterns)
 
-### 0. 算力漏斗與立項評估 (Scope & Compute Funnel Calculator)
-- **坎城實戰錄取率基準**：
-  - **設定圖錄取率 1.0%**（約每 100 抽獲得 1 張鎖定圖；主角基準約 800 抽）。
-  - **視頻鏡頭錄取率 1.5%**（約每 65–100 抽獲得 1 鏡可用剪輯鏡頭）。
-- **雙週攻堅時間表**：
-  - **Phase 1（粗剪骨架，前 7 天）**：迅速填滿時間軸，先求有再求好，忽略輕微瑕疵。
-  - **Phase 2（70% 算力狂飆，後 7 天）**：集中 70% 算力狂攻主角高壓對決特寫 (Hero Close-ups)。
+```mermaid
+flowchart TD
+    subgraph Frontend["零建構原生前端 (Zero-Build ES Modules UI)"]
+        UI_Mode["雙模式切換<br/>✨ Guided Wizard / 🎛️ Tactical Studio"]
+        Canvas_Radar["2D 空間雷達畫布 (Radar Canvas)"]
+        Canvas_Prop["紅箭頭預合成畫布 (Prop Canvas)"]
+        Backlot_Board["4 大審批閘門看板 (Backlot Board)"]
+    end
 
-### 1. 資產鍛造與無頭設定圖工坊 (Asset Forge & Gatekeeper)
-- **黃金法則 #1：資產未立，禁止開鏡 (Assets First)**
-  - 10/10 壓力測試檢查表未過關前，鎖定 Stage 4 提示詞生成。
-- **角色三視圖建構器 (`@char_tag`)**：
-  - 模型路由：`Higgsfield Soul 2.0 (16:9, 2K, Soul ID)`（警示 Soul 2.0 不支援 21:9）。
-  - **無頭法則 (The Headless Law)**：Panel 1 正面全身照徹底抹除頭部，強迫模型在全景時從 Panel 3 高解析特寫取樣面孔，消滅遠景臉漂。
-  - **無聊設定圖鐵則**：鎖定中灰純色背景 (`#808080`) 與平光，嚴禁烘焙顆粒或強色調。
-  - **狀態拆分器**：1鍵複製為 `@hero_wet`、`@hero_blood`、`@hero_wounded`。
-  - **聲線身分鎖**：鎖定年齡、音色、節奏、情緒壓迫為不可變字面字串。
-- **場景空鏡盤建構器 (`@loc_tag`)**：
-  - 模型路由：`Higgsfield Soul Cinema (21:9)`。
-  - 強制 3/4 斜對角俯視錨定、單一主光源邏輯、明確空間錨定物。
-  - 反打鏡頭逆向秘技（NBP 鏡像法 / Seedance 空鏡運鏡抽幀法）。
-- **道具紅箭頭標註工作台 (`@prop_tag`)**：
-  - HTML5 互動畫布，拖曳繪製紅箭頭鎖定手部接觸點，消滅空氣抓握。
-- **圖像微創手術三步法 (Surgical Mask Pipeline)**：
-  - 1. NBP（遮罩定點微調）➔ 2. Seedream 4.5（材質廢料拯救）➔ 3. GPT Image 2（微創最後手段）。
+    subgraph Backend["FastAPI 後端核心 (Single-Command Engine)"]
+        API_Gateway["FastAPI App (app/main.py)<br/>REST Endpoints + SSE Event Stream"]
+        WS_Mgr["工作區管理 (WorkspaceManager)<br/>projects/<id>/project.json + Checkpoints"]
+        Compiler["動態提示詞編譯器 (PromptCompiler)<br/>10-Section & 15-Block Dual Mode"]
+        QA_Engine["20-Point Industrial QA & Auto-Fix"]
+        Rescue_Engine["單變量停損救援引擎 (RescueEngine)"]
+        Animatic_Engine["本機 Pillow 2.39:1 Animatic Provider"]
+        Composer["時間軸合成器 (TimelineComposer & FFmpeg)"]
+    end
 
-### 2. GEO 空間平面圖與 180° 越軸雷達 (Spatial Radar)
-- **互動 2D 舞台頂視圖畫布 (HTML5 Canvas)**：
-  - 標示主錨定物（3米圓形訓練墊）與次級道具。
-  - 角色標記獨立控制「**身軀朝向角度 (Torso)**」與「**獨立視線凝視角度 (Gaze)**」。
-  - 180° 攝影機軸線（嚴禁越軸）與逆光 (Contre-Jour) 陰影側拍攝規劃。
-- **嚴格空間詞彙攔截器 (Strict GEO Linter)**：
-  - 自動攔截並替換 `near`、`around`、`beside` 等模糊詞，改為精確公尺與 `frame-LEFT`/`frame-RIGHT` 定位。
+    subgraph Agent_Skills["OpenMontage 相容三層 Agent Skills"]
+        Skill_Director["Stage Director Skill<br/>(skills/guided-storyboard-director)"]
+        Skill_Methodology["Methodology Skill<br/>(skills/hell-grind-cinematography)"]
+        Skill_Provider["Provider Skill<br/>(skills/seedance-prompt-compiler)"]
+    end
 
-### 3. 梅斯納行為演技與音軌隔離室 (Meisner Acting Lab)
-- **梅斯納核心公理**：「演戲是高壓下的具體行為，不是情緒展示。」
-- **五大支柱建構表**：
-  - 1. 目標 Objective（對對手施加的動作動詞）
-  - 2. 障礙與生死賭注 Obstacle & Stakes
-  - 3. 戰術轉折鏈 Tactic Shift
-  - 4. 忙碌雙手 Hand Business
-  - 5. 停頓重音 Interrupted Accent
-- **情緒形容詞與定格攔截器**：
-  - 即時阻擋 `angry`、`sad`、`nervous`、`frozen`，1鍵轉譯為肌肉抽動、呼吸頻率與下唇緊繃。
-- **靈動眼神與三段式微眨眼 (Phased Eye-Life)**：
-  - 注入 `one lazy blink -> quick double-blink -> hard reset-blink; eyes reach target 0.5s before head`。
-- **台詞隔離與防亂動嘴音軌 (Filler-Babble Fix)**：
-  - 台詞與動作完全隔離，注入坎城專利閉嘴鎖。
-
-### 4. 15層 CINEDANCE 組裝機 (15-Block Shot Compiler)
-- **完整的 15 層提示詞骨架**：
-  1. `GLOBAL_STYLE_PREFIX`
-  2. `POSITIVE_CONSTRAINTS`
-  3. `CAMERA_PERSPECTIVE_AND_FOV`
-  4. `CAMERA_MOTION_AND_SPEED`
-  5. `LIGHTING_AND_COLOR_SCIENCE`
-  6. `LOCATION_ENVIRONMENT_PLATE`
-  7. `SPATIAL_ANCHORS_AND_GEO`
-  8. `CHARACTER_IDENTITY_AND_WARDROBE`
-  9. `HERO_PROPS_AND_INTERACTION`
-  10. `MEISNER_OBJECTIVE_AND_BEHAVIOR`
-  11. `EYE_LIFE_AND_MICRO_EXPRESSIONS`
-  12. `ACTION_TIMING_BEATS`
-  13. `SEAM_STITCH_AND_FIRST_SECOND_WIDE`
-  14. `ISOLATED_AUDIO_AND_DIALOGUE`
-  15. `NEGATIVE_AND_ANTI_DRIFT_LOCKS`
-- **核心光學決策樹**：
-  - 嚴格禁用 `mm`、`f-stop`、`ISO`。提供 6 款 canonical 對角線 FOV（`107°`, `84°`, `47°`, `29°`, `18°`, `8°`）。
-- **黃金第 1 秒定裝與片尾台詞縫合 (0.0–1.0s Holding Beat)**。
-- **三句上限分秒動作拍**。
-- **20 項導演靜默自我審查 (Live 20-Point QA Checklist)**。
-
-### 5. 單變量手術日誌與急救室 (Doctor & Diff Log)
-- **版本對比引擎 (Diff Checker)**：高亮行對比，重寫超過 20% 自動警告。
-- **10–15 次迭代停損警報 (Stop-Loss Siren)**：
-  - 第 10 次觸發黃色警報。
-  - 第 15 次啟動紅色停損警報（「停止換詞！此動作已超出模型潛在空間」）。
-  - **1鍵降維救援方案**：拆分為兩鏡 / 切換為胸上中特寫 / 移除次要道具。
-- **6 大死線災難一鍵急救室**：
-  1. 滑步漂移 (Walking Float) ➔ 注入地面接觸陰影鎖
-  2. 空氣抓握 (Mimed Manipulation) ➔ 注入紅箭頭接觸與指節泛白鎖
-  3. 打鬥斷裂 (Choppy Fight Cuts) ➔ 注入 0.0s 慣性繼承
-  4. 破門卡死 (Door/Impact Freeze) ➔ 注入 0.0s 已埋入三寸預爆裂
-  5. 巨物縮小 (Shrinking Giant) ➔ 注入巨物絕對比例尺度律
-  6. 講完話亂動嘴 (Post-Line Babble) ➔ 注入下顎緊閉絕對靜音鎖
-
----
-
-## 🚀 如何運行 (How to Run)
-
-本系統為 **Zero-Dependency（零依賴）** 輕量架構，無需任何 `npm install` 或編譯打包步驟。
-
-### 方法 1：直接在瀏覽器開啟
-直接在 Windows 檔案總管中雙擊 `index.html`，或將檔案拖入 Google Chrome / Microsoft Edge / Safari 即可完整運行。
-
-### 方法 2：使用本機輕量伺服器
-```powershell
-# 使用 Python 內建伺服器
-python -m http.server 8000
+    Frontend <-->|HTTP REST / SSE Stream| API_Gateway
+    API_Gateway --> WS_Mgr
+    API_Gateway --> Compiler
+    API_Gateway --> QA_Engine
+    API_Gateway --> Rescue_Engine
+    API_Gateway --> Animatic_Engine
+    API_Gateway --> Composer
+    Agent_Skills -.->|規範約束與自主調用| API_Gateway
 ```
-瀏覽器訪問：`http://localhost:8000`
+
+### 三大靈感來源與設計模式：
+1. **Higgsfield Hell Grind**：
+   - **無頭法則 (The Headless Law)**：Panel 1 正面全景抹除頭部，強迫模型向高解析特寫取樣面部，消滅遠景臉漂。
+   - **紅箭頭預合成 (`#FF0000`)**：利用精確紅箭頭標籤鎖定手指與道具接觸點，阻斷空氣抓握。
+   - **梅斯納生理行為學 (Meisner Acting)**：以客觀生理動作（呼吸、眼跳、肌緊張、抓握急停）取代抽象情緒詞。
+2. **OpenMontage**：
+   - **三層 Agent Skills 架構**：Stage Director、Methodology、Provider 分層解耦。
+   - **4 大 Backlot 審批閘門**：上游資產未簽核前禁止開鏡，每步生成帶時間戳的歷史檢查點。
+3. **MoneyPrinterTurbo**：
+   - **極簡現代單一指令啟動**：不需要複雜的 Node.js/Webpack 打包，一條指令直開前後端服務。
 
 ---
 
-## 💾 專案存檔與範本
-- **自動保存**：所有修改即時儲存於瀏覽器 `localStorage`。
-- **坎城獲獎範本**：內建預載《Hell Grind》「Roco's Underground Training Room + Ritual Cliff」全套資產、空間平面圖與提示詞。
-- **專案匯入 / 匯出**：支援 1 鍵將專案規格打包為 `.json` 檔案備份或團隊協作分享。
+## ⚡ 快速開始 (Quickstart)
+
+本系統採 **Zero-Build Vanilla ES Modules** 架構，前端無須 `npm install` 或任何構建步驟。
+
+### 1. 安裝環境依賴
+```powershell
+pip install -r requirements.txt
+```
+
+### 2. 單一指令啟動服務
+```powershell
+uvicorn app.main:app --reload --port 8000
+```
+
+### 3. 開啟瀏覽器
+開啟瀏覽器訪問：
+👉 **http://localhost:8000**
+
+系統已內建預熱示範專案 `projects/demo-hell-grind/`，開啟即可立即體驗完整 3 鏡頭分鏡、2D 空間走位、已編譯的 10-Section 提示詞以及 2.39:1 動態分鏡 Slate！
+
+---
+
+## 🎛️ 雙模式工作流 (Dual-Mode Workflow)
+
+SSRStudio v2 專為不同背景的創作者設計了雙向無縫切換的控制介面：
+
+| 功能特性 | ✨ 導演引導模式 (Guided Wizard) | 🎛️ 專家戰術控制台 (Pro Tactical Studio) |
+| :--- | :--- | :--- |
+| **適用對象** | 零基礎創作者、編劇、獨立製作人 | 專業分鏡師、電影攝影指導、Prompt 工程師 |
+| **操作方式** | 點選預設範本或輸入一句話概念，一鍵開案 | 手動微調幾何坐標、光學參數與連續性鎖定 |
+| **內建範本** | 鐵籠死鬥 (Hell Grind)、量子金庫 (Cyber Heist)、雪林決鬥 (Snow Bamboo) | 支援自由建立空白專案與多鏡頭無縫切換 |
+| **流程導引** | 視覺化 4 大審批閘門卡片與即時狀態回饋 | 深度檢查點恢復、單變量 Diff 比對與停損警報 |
+| **提示詞產出** | 自動補全連續性鎖定並一鍵自動修復至 20/20 QA | 支援 10-Section 與 15-Block 雙結構即時手動微調 |
+
+---
+
+## 🚀 核心功能剖析 (Core Features Breakdown)
+
+### 1. 100% 離線確定論 Pillow 2.39:1 Animatic Slate 生成器
+- 渲染標準 **2.39:1 CinemaScope (1920×804)** 高保真工業分鏡板。
+- 自動繪製：
+  - **安全框與三分法構圖輔助線 (Rule of Thirds)**。
+  - **中央 2D 空間雷達俯視圖**（主體坐標、視線朝向向量、道具錨點）。
+  - **依焦段計算之攝影機視野錐角 (Camera Frustum Cone)**（24mm: 107°、35mm: 84°、50mm: 47°、85mm: 29°、135mm: 18°）。
+  - **工業級 Metadata 資訊欄**（Scene/Shot 標籤、SMPTE 時間碼、光學鏡頭鎖、梅斯納刺激與對白）。
+
+### 2. 真實坐標 2D 空間走位雷達 (2D Spatial Radar)
+- 互動式 HTML5 Canvas，支援以標準化坐標 $(x, y \in [0.0, 1.0])$ 拖曳攝影機、角色與道具。
+- 即時計算角色身軀朝向角度 (Facing Degree) 與 180° 越軸警示。
+- 幾何編譯器自動將坐標轉換為 Seedance/Soul 相容之物理空間公尺與方位敘述。
+
+### 3. 紅箭頭接觸預合成工作台 (Red-Arrow Contact Pre-comp)
+- 內建專用互動畫布，支援上傳或載入角色與道具底圖。
+- 繪製標準電影工業規格之 `#FF0000` 亮紅箭頭與錨定框（Bounding Box）。
+- 一鍵匯出為高解析接觸參考圖 (`projects/<id>/assets/`)，徹底消滅空氣抓握。
+
+### 4. 動態 10-Section & 15-Block 提示詞雙模編譯器
+- **10-Section 結構 (Seedance 2.0 / 2.5 官方推薦)**：
+  - `SECTION 1: GLOBAL STYLE & OPTICAL STACK`
+  - `SECTION 2: POSITIVE CAMERA & RENDER CONSTRAINTS`
+  - `SECTION 3: CAMERA OPTICS, PERSPECTIVE & RIG MOVE`
+  - `SECTION 4: LIGHTING DISCIPLINE & COLOR SCIENCE`
+  - `SECTION 5: LOCATION ENVIRONMENT & GEOMETRIC ANCHORS`
+  - `SECTION 6: CHARACTER IDENTITY, WARDROBE & CONTINUITY`
+  - `SECTION 7: HERO PROPS, TACTILE INTERACTION & RED-ARROW ANCHORS`
+  - `SECTION 8: MEISNER OBJECTIVE, BEHAVIOR & MICRO-ACTIONS`
+  - `SECTION 9: AUDIO DISCIPLINE, PHONETIC TIMING & DIALOGUE`
+  - `SECTION 10: ANTI-DRIFT NEGATIVE LOCKS`
+- **五大具名連續性鎖定 (5 Named Continuity Locks)**：
+  - `First Frame Lock`（首秒定裝與幾何錨定）
+  - `Screen Direction Lock`（180° 越軸保護線）
+  - `Lens Lock`（嚴格鎖定無焦距滑移）
+  - `Count Lock`（畫內精確人數約束）
+  - `Stillness Lock`（背景幾何剛性鎖定）
+  - `Monotonic State Notes`（單調狀態演進：塵埃、雨水、傷痕只增不減）
+
+### 5. 20 點工業級 QA 審查與一鍵自動修復 (20-Point Industrial QA & Auto-Fix)
+- 針對焦段規格、模糊空間詞、抽象情緒形容詞、梅斯納生理三句律、角膜反光、抓握停頓、閉嘴鎖進行逐項嚴格掃描。
+- 提供 `POST /api/projects/{id}/shots/{id}/auto-fix`，0.1 秒內自動糾正不合格屬性，保證達到 **20/20 滿分通過**。
+
+### 6. 單變量停損救援引擎 (Single-Variable Diff & Rescue Engine)
+- **Token 級變更審計**：監控提示詞更動幅度，若單次修改超過一個實體或光學維度立即發出警報。
+- **10–15 次迭代停損警報**：
+  - 第 10 次微調無果觸發黃色警戒。
+  - 第 15 次觸發紅色停損（「停止改詞！已超出模型潛在空間」）。
+- **坎城級降維救援方案**：
+  - 一鍵切換為「0.8 秒反應特寫橋接鏡 (0.8s Reaction Bridge Cut)」。
+  - 拆分為雙機位兩鏡。
+  - 移除次要道具以換取手部穩定度。
+
+### 7. 四大 Backlot 審批閘門與檢查點系統 (Backlot Approval Gates)
+- **Gate 1: Story Funnel**（五階段故事漏斗審批）
+- **Gate 2: Asset Bible**（無頭三視圖與資產鎖定）
+- **Gate 3: Storyboard & Blocking**（2D 雷達走位與紅箭頭預合成）
+- **Gate 4: Final Render & Assembly**（10-Section 編譯、20 點 QA 與時間軸合成）
+- 每次審批狀態變更時，後端自動於 `checkpoints/` 生成帶時間戳的完整專案快照。
+
+---
+
+## 🤖 專案內建 Agent Skills 目錄 (Agent Skills Catalog)
+
+SSRStudio v2 原生整合了 OpenMontage 相容的三層 Agent Skills 架構，位於 `skills/` 目錄：
+
+```
+skills/
+├── guided-storyboard-director/   # [Layer 2] 階段導演技能 (Stage Director)
+│   └── SKILL.md                 # 引導 4 大審批閘門推進、REST API 調用與工作區存檔
+├── hell-grind-cinematography/    # [Layer 1] 電影方法論技能 (Methodology)
+│   └── SKILL.md                 # 坎城無頭圖、紅箭頭預合成、梅斯納動詞、單變量停損守則
+└── seedance-prompt-compiler/     # [Layer 3] 模型編譯器技能 (Provider Compiler)
+    └── SKILL.md                 # Seedance 2.0 / 2.5 雙模編譯、5 大連續性鎖與音色錨點
+```
+
+在 Antigravity 或任何 Coding Agent 中工作時，Agent 可直接讀取這些技能標準，自主完成專業級分鏡創作。
+
+---
+
+## 🔌 可插拔 Provider 適配器擴充指南 (Pluggable Providers)
+
+SSRStudio v2 採用乾淨的抽象協定（Protocols / Abstract Base Classes），便於將本地模擬環境無縫切換為線上生成服務：
+
+```python
+# app/core/tool_registry.py 或 app/services/media_providers.py
+from app.core.tool_registry import BaseImageProvider, BaseVideoProvider, BaseTTSProvider
+from app.services.llm_director import BaseLLMProvider
+
+# 1. 擴充文字大模型 (LLM Provider)
+class CustomOpenAILLM(BaseLLMProvider):
+    def complete(self, prompt: str, **kwargs) -> str:
+        # 串接 OpenAI / Gemini / Claude API
+        return "..."
+
+# 2. 擴充文生圖模型 (Image Provider)
+class Soul2LiveImageAdapter(BaseImageProvider):
+    def generate_image(self, prompt: str, **kwargs) -> str:
+        # 呼叫 Higgsfield Soul 2.0 官方 API 生成無頭設定圖
+        return "https://..."
+
+# 3. 擴充生視頻模型 (Video Provider)
+class SeedanceLiveVideoAdapter(BaseVideoProvider):
+    def generate_video(self, prompt: str, **kwargs) -> str:
+        # 呼叫 ByteDance Seedance 2.0 API 提交 10-Section Prompt
+        return "https://..."
+```
+
+---
+
+## 📁 專案檔案結構 (Project Layout)
+
+```
+ssrstudio/
+├── app/                        # 後端核心服務
+│   ├── api/                    # FastAPI REST & SSE 路由 (projects, compiler, assets, wizard, events)
+│   ├── core/                   # 幾何編譯器、提示詞編譯器、Linter、QA、救援引擎、工作區管理
+│   ├── models/                 # Pydantic 資料模型 (ProjectState, ShotSpec, StoryFunnel 等)
+│   ├── services/               # 引導導演服務 (LLMDirector)、媒體適配器、時間軸合成器
+│   ├── config.py               # 路徑與常數配置
+│   └── main.py                 # FastAPI 入口 (一鍵掛載靜態資源與 API)
+├── web/                        # 前端原生 ES Modules (Zero-Build)
+│   ├── css/studio.css          # 工業級電影工作台深色樣式
+│   └── js/                     # 原生 ES 模組 (app.js, api_client.js, guided_wizard.js, radar_canvas.js, etc.)
+├── skills/                     # 三層 OpenMontage 相容 Agent Skills
+├── projects/                   # 工作區專案目錄
+│   └── demo-hell-grind/        # 內建預熱示範專案 (含 project.json, checkpoints, renders)
+├── tests/                      # 全套自動化測試 (100% 通過)
+├── index.html                  # 前端主頁面入口
+└── pytest.ini                  # Pytest 配置
+```
+
+---
+
+## 🧪 測試與驗證 (Verification)
+
+執行全套測試套件：
+```powershell
+pytest -v
+```
+預期結果：**22 passed, 100% pass rate**。
+
+---
+
+## 📄 授權條款 (License)
+
+SSRStudio v2 遵循 MIT 授權條款。歡迎自由使用、修改與二次開發！

@@ -1,0 +1,232 @@
+{
+  "project_id": "demo-hell-grind",
+  "title": "Hell Grind: Cyber Samurai Cage Match",
+  "idea": "一名獨臂女武士在暴風雪竹林中，用斷刃精準架開機甲忍者的紅外線高頻太刀",
+  "funnel": {
+    "genre_tone": "Cinematic Neo-Noir / Cyber-Samurai Anamorphic",
+    "world_reality": "Blizzard-swept mountain bamboo grove under heavy cyan dusk with high-contrast snow drift physics",
+    "core_conflict": "One-armed warrior defending personal honor against synthetic corporate assassin",
+    "protagonist_arc": "Stoic ronin rediscovering lethal focus through sensory anticipation",
+    "visual_motif": "Reflective snow crystals, sharp 5600K directional key with contre-jour rim lighting, crimson optical glare",
+    "aspect_ratio": "2.39:1",
+    "target_duration_sec": 30
+  },
+  "characters": [
+    {
+      "handle": "@ronin_yuki",
+      "name": "Yuki the Ronin",
+      "wardrobe_lock": "Charcoal weathered linen haori over Kevlar under-armor, left sleeve pinned neatly with brass buckle, frayed hem with frosted hemline. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.",
+      "voice_lock": "Low gravelly cadence, measured pauses, sharp Japanese-phonetic consonant clarity, calm guttural pitch.",
+      "turnaround_image": null,
+      "headless_sheet_image": null,
+      "closeup_images": []
+    },
+    {
+      "handle": "@mecha_ninja",
+      "name": "Kage Unit 07",
+      "wardrobe_lock": "Matte black ceramic plating with crimson optical joints, integrated ballistic carbon fiber weave, hooded shroud. Headless sheet consistency verified.",
+      "voice_lock": "Synthesized vocoder resonance, mechanical sub-bass undertone, zero breath inflection.",
+      "turnaround_image": null,
+      "headless_sheet_image": null,
+      "closeup_images": []
+    }
+  ],
+  "locations": [
+    {
+      "handle": "@snow_bamboo_grove",
+      "name": "Snow-Covered Bamboo Forest",
+      "lighting_lock": "Directional 5600K key lighting piercing through bamboo stalks with sharp 45° contre-jour rim light and deep shadow fill bounce.",
+      "architecture_lock": "Vertical frozen green bamboo stalks at 1.5m spacing, 10cm fresh powder snow on dark frozen soil.",
+      "reference_images": []
+    }
+  ],
+  "props": [
+    {
+      "handle": "@broken_blade",
+      "name": "Broken Tachi Blade",
+      "material_lock": "Forged folded tamahagane steel with chipped tip, micro-serrated fractured edge reflecting rim light, leather cord tsuka wrap.",
+      "contact_sheet_image": null
+    },
+    {
+      "handle": "@plasma_katana",
+      "name": "High-Frequency Infrared Katana",
+      "material_lock": "Titanium alloy blade emitting 800nm crimson optical flare, heatsink vents along mune, carbon composite hilt.",
+      "contact_sheet_image": null
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "shot-01",
+      "scene_id": "scene-01",
+      "order": 1,
+      "title": "Wide Establishing Shot",
+      "duration_sec": 10,
+      "camera_lens_mm": 24,
+      "camera_move": "Locked-off tripod wide frame with subtle horizontal pan",
+      "spatial_nodes": [
+        {
+          "id": "cam",
+          "handle": "camera",
+          "role": "camera",
+          "x": 0.5,
+          "y": 0.15,
+          "facing_deg": 0.0
+        },
+        {
+          "id": "sub1",
+          "handle": "@ronin_yuki",
+          "role": "subject",
+          "x": 0.35,
+          "y": 0.55,
+          "facing_deg": 90.0
+        },
+        {
+          "id": "sub2",
+          "handle": "@mecha_ninja",
+          "role": "subject",
+          "x": 0.65,
+          "y": 0.55,
+          "facing_deg": 270.0
+        },
+        {
+          "id": "prop",
+          "handle": "@broken_blade",
+          "role": "prop",
+          "x": 0.36,
+          "y": 0.55,
+          "facing_deg": 90.0
+        }
+      ],
+      "meisner_stimulus": "Gust of icy wind rattles frozen bamboo stalks behind actor at 4.0m distance.",
+      "meisner_micro_action": "Eyes snap to opponent 0.4s before head rotation; hands freeze in firm two-handed grip on hilt.",
+      "dialogue_line": "The snow will not hide your footsteps.",
+      "continuity_locks": {
+        "first_frame_lock": "First-second wide holding beat: actors anchored at 4.0m separation in midground, holding posture in sharp stillness at 2.0m lateral offset.",
+        "screen_direction_lock": "Strict 180-degree camera axis enforced; screen-left warrior faces screen-right adversary.",
+        "lens_lock": "24mm anamorphic prime lens, 107° rectilinear perspective, zero focal length shift, dynamic depth-of-field compression, optical bokeh texture.",
+        "count_lock": "Exactly 2 human combatants in frame.",
+        "stillness_lock": "Frozen bamboo stalks remain rigid except for subtle wind drift; background geometry locked.",
+        "monotonic_state_notes": "Snow dusting on shoulders and haori fabric accumulates monotonically without disappearing."
+      },
+      "precomp_image_path": null,
+      "animatic_slate_path": "projects\\demo-hell-grind\\renders\\shot-01_slate.png",
+      "animatic_Drop_path": null,
+      "compiled_10_section": "GLOBAL STYLE: Feature film cinematic capture, 2.39:1 CinemaScope, anamorphic optical texture with subtle horizontal breathing, low-key directional lighting, tactile atmospheric grain. Cinematic Neo-Noir / Cyber-Samurai Anamorphic. Reflective snow crystals, sharp 5600K directional key with contre-jour rim lighting, crimson optical glare.\n\nSCENE: Scene scene-01 - Shot 1: Wide Establishing Shot (10s). Core narrative tension: One-armed warrior defending personal honor against synthetic corporate assassin.\n\nCHARACTERS: @ronin_yuki (Yuki the Ronin) in Charcoal weathered linen haori over Kevlar under-armor, left sleeve pinned neatly with brass buckle, frayed hem with frosted hemline. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet. @mecha_ninja (Kage Unit 07) in Matte black ceramic plating with crimson optical joints, integrated ballistic carbon fiber weave, hooded shroud. Headless sheet consistency verified.. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.\n\nLOCATION: @snow_bamboo_grove (Snow-Covered Bamboo Forest). Vertical frozen green bamboo stalks at 1.5m spacing, 10cm fresh powder snow on dark frozen soil..\n\nFIRST FRAME AND SPATIAL BLOCKING:\nFirst-second wide holding beat: actors anchored at 4.0m separation in midground, holding posture in sharp stillness at 2.0m lateral offset.\nSPATIAL BLOCKING & RADAR GEOMETRY (Lens: 24mm, Camera Move: Locked-off tripod wide frame with subtle horizontal pan):\n- Camera placement: at 0.50x, 0.15y [screen-center, background], 180° camera axis strictly respected.\n- @ronin_yuki position: screen-left in the midground (approx. 1.9m from lens), torso and eyeline oriented at 90° (camera-forward / downstage (90°)).\n- @mecha_ninja position: screen-right in the midground (approx. 1.9m from lens), torso and eyeline oriented at 270° (upstage / away from camera (270°)).\n- Prop @broken_blade: positioned at screen-left in the midground.\n\nSHOT SPECIFICATION: Shot 1 (Duration: 10s, Hard cut). Action beat: Gust of icy wind rattles frozen bamboo stalks behind actor at 4.0m distance. -> Eyes snap to opponent 0.4s before head rotation; hands freeze in firm two-handed grip on hilt..\n\nOPTICS / CAMERA:\nLENS LOCK: 24mm anamorphic prime lens, 107° rectilinear perspective, zero focal length shift, dynamic depth-of-field compression, optical bokeh texture..\nSCREEN DIRECTION: Strict 180-degree camera axis enforced; screen-left warrior faces screen-right adversary..\nCamera Move: Locked-off tripod wide frame with subtle horizontal pan. Extreme environmental scale, dynamic edge elongation, barrel distortion suppression, expansive sky tension.\n\nPHYSICS:\nCOUNT LOCK: Exactly 2 human combatants in frame..\nSTILLNESS LOCK: Frozen bamboo stalks remain rigid except for subtle wind drift; background geometry locked..\nMONOTONIC STATE: Snow dusting on shoulders and haori fabric accumulates monotonically without disappearing..\nGround-contact physics enforced: boots cast contact shadows.\n\nLIGHTING: Directional 5600K key lighting piercing through bamboo stalks with sharp 45° contre-jour rim light and deep shadow fill bounce.\n\nAUDIO: Voice Identity: Low gravelly cadence, measured pauses, sharp Japanese-phonetic consonant clarity, calm guttural pitch.\nLine: \"The snow will not hide your footsteps.\"\nFiller-Babble Fix: Nobody else speaks; other visible characters keep lips at rest, jaw closed, strictly silent listening beat after line is spoken. No ad-libs. SFX only. No background music. No subtitles.",
+      "compiled_15_block": "[01/15] GLOBAL_STYLE_PREFIX: Feature film cinematic capture, 2.39:1 CinemaScope, anamorphic optical texture with subtle horizontal breathing, low-key directional lighting, tactile atmospheric grain. Genre & Tone: Cinematic Neo-Noir / Cyber-Samurai Anamorphic. World Reality: Blizzard-swept mountain bamboo grove under heavy cyan dusk with high-contrast snow drift physics. Visual Motif: Reflective snow crystals, sharp 5600K directional key with contre-jour rim lighting, crimson optical glare.\n\n[02/15] POSITIVE_CONSTRAINTS: Exactly 2 characters in shot (@ronin_yuki, @mecha_ninja). Exactly 1 primary prop (@broken_blade). Ground-contact physics enforced: boots cast dark contact shadows on floor.\n\n[03/15] CAMERA_PERSPECTIVE_AND_FOV: 107° Wide Rectilinear (24mm). Optical characteristics: Extreme environmental scale, dynamic edge elongation, barrel distortion suppression, expansive sky tension. Anamorphic prime with controlled bokeh. Lens lock: 24mm anamorphic prime lens, 107° rectilinear perspective, zero focal length shift, dynamic depth-of-field compression, optical bokeh texture.. Banned: no mm focal length tags in action beats, no f-stop, no ISO, no shutter speed tags.\n\n[04/15] CAMERA_MOTION_AND_SPEED: Locked-off tripod wide frame with subtle horizontal pan. Zero handheld jitter, zero gimbal roll, stable fluid track.\n\n[05/15] LIGHTING_AND_COLOR_SCIENCE: Directional 5600K key lighting piercing through bamboo stalks with sharp 45° contre-jour rim light and deep shadow fill bounce. Deep shadow-side exposure with balanced fill bounce.\n\n[06/15] LOCATION_ENVIRONMENT_PLATE: @snow_bamboo_grove (Snow-Covered Bamboo Forest). Vertical frozen green bamboo stalks at 1.5m spacing, 10cm fresh powder snow on dark frozen soil.\n\n[07/15] SPATIAL_ANCHORS_AND_GEO: SPATIAL BLOCKING & RADAR GEOMETRY (Lens: 24mm, Camera Move: Locked-off tripod wide frame with subtle horizontal pan):\n- Camera placement: at 0.50x, 0.15y [screen-center, background], 180° camera axis strictly respected.\n- @ronin_yuki position: screen-left in the midground (approx. 1.9m from lens), torso and eyeline oriented at 90° (camera-forward / downstage (90°)).\n- @mecha_ninja position: screen-right in the midground (approx. 1.9m from lens), torso and eyeline oriented at 270° (upstage / away from camera (270°)).\n- Prop @broken_blade: positioned at screen-left in the midground.\n\n[08/15] CHARACTER_IDENTITY_AND_WARDROBE: @ronin_yuki (Yuki the Ronin) in Charcoal weathered linen haori over Kevlar under-armor, left sleeve pinned neatly with brass buckle, frayed hem with frosted hemline. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet. @mecha_ninja (Kage Unit 07) in Matte black ceramic plating with crimson optical joints, integrated ballistic carbon fiber weave, hooded shroud. Headless sheet consistency verified.. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.\n\n[09/15] HERO_PROPS_AND_INTERACTION: Hold @broken_blade (Broken Tachi Blade) exactly where the red arrow points on the reference image, material: Forged folded tamahagane steel with chipped tip, micro-serrated fractured edge reflecting rim light, leather cord tsuka wrap., knuckles blanching white with applied grip torque.\n\n[10/15] MEISNER_OBJECTIVE_AND_BEHAVIOR: Objective: One-armed warrior defending personal honor against synthetic corporate assassin. Stimulus: Gust of icy wind rattles frozen bamboo stalks behind actor at 4.0m distance.. Micro-action: Eyes snap to opponent 0.4s before head rotation; hands freeze in firm two-handed grip on hilt.. Interrupted accent: hands freeze mid-motion as line delivers.\n\n[11/15] EYE_LIFE_AND_MICRO_EXPRESSIONS: Eyes execute human micro-saccades: one slow lazy blink at 01.2s -> quick double-blink at 04.5s -> hard reset-blink at 07.8s; eyes snap to target 0.4s before head rotates; moist corneal catch-lights catching rim light.\n\n[12/15] ACTION_TIMING_BEATS:\n- 0.0–1.0s: First-second stabilization beat: First-second wide holding beat: actors anchored at 4.0m separation in midground, holding posture in sharp stillness at 2.0m lateral offset.\n- 1.0–4.0s: Stimulus occurs: Gust of icy wind rattles frozen bamboo stalks behind actor at 4.0m distance.\n- 4.0–8.0s: Micro-action response: Eyes snap to opponent 0.4s before head rotation; hands freeze in firm two-handed grip on hilt.\n- 8.0–10.0s: Dialogue delivery and holding beat: 'The snow will not hide your footsteps.' spoken with locked eyeline.\n\n[13/15] SEAM_STITCH_AND_FIRST_SECOND_WIDE: First-second stabilization beat active: First-second wide holding beat: actors anchored at 4.0m separation in midground, holding posture in sharp stillness at 2.0m lateral offset. Dialogue tail stitched: \"The snow will not hide your footsteps.\" feeding into holding beat.\n\n[14/15] ISOLATED_AUDIO_AND_DIALOGUE: Voice: Low gravelly cadence, measured pauses, sharp Japanese-phonetic consonant clarity, calm guttural pitch. | Line: \"The snow will not hide your footsteps.\" | Filler-Babble Fix: Nobody else speaks; other visible characters keep lips at rest, jaw closed, strictly silent listening beat after line is spoken. No ad-libs. SFX only. No background music. No subtitles.\n\n[15/15] NEGATIVE_AND_ANTI_DRIFT_LOCKS: No morphing fingers, no floating boots, no teleporting actors, no crossing 180 axis, no extra limbs, no unprompted smiles, no dead flat eyes, no double suns.",
+      "qa_passed": true,
+      "iteration_count": 0,
+      "rescue_history": [],
+      "status": "draft"
+    },
+    {
+      "shot_id": "shot-02",
+      "scene_id": "scene-01",
+      "order": 2,
+      "title": "Medium Reaction Shot",
+      "duration_sec": 10,
+      "camera_lens_mm": 35,
+      "camera_move": "Slow 35mm optical dolly track inward along eyeline",
+      "spatial_nodes": [
+        {
+          "id": "cam",
+          "handle": "camera",
+          "role": "camera",
+          "x": 0.45,
+          "y": 0.25,
+          "facing_deg": 0.0
+        },
+        {
+          "id": "sub1",
+          "handle": "@ronin_yuki",
+          "role": "subject",
+          "x": 0.45,
+          "y": 0.55,
+          "facing_deg": 90.0
+        },
+        {
+          "id": "prop",
+          "handle": "@broken_blade",
+          "role": "prop",
+          "x": 0.46,
+          "y": 0.55,
+          "facing_deg": 90.0
+        }
+      ],
+      "meisner_stimulus": "Infrared targeting beam sweeps across warrior's collarbone.",
+      "meisner_micro_action": "Corneal catch-lights flare as pupils dilate; right thumb clicks tsuba guard open 3mm with tight grip.",
+      "dialogue_line": "You came alone.",
+      "continuity_locks": {
+        "first_frame_lock": "First-second holding beat: warrior centered at 2.0m medium framing, posture locked in foreground.",
+        "screen_direction_lock": "Strict 180-degree camera axis enforced; eyeline locked toward screen-right.",
+        "lens_lock": "35mm anamorphic prime lens, 84° field of view, zero focal length shift, cinematic depth-of-field compression, optical bokeh texture.",
+        "count_lock": "Exactly 1 character in foreground frame.",
+        "stillness_lock": "Shoulder strap and collar maintain rigid alignment without warping.",
+        "monotonic_state_notes": "Infrared laser reflection on cheekbone persists monotonically across frame."
+      },
+      "precomp_image_path": null,
+      "animatic_slate_path": "projects\\demo-hell-grind\\renders\\shot-02_slate.png",
+      "animatic_Drop_path": null,
+      "compiled_10_section": "GLOBAL STYLE: Feature film cinematic capture, 2.39:1 CinemaScope, anamorphic optical texture with subtle horizontal breathing, low-key directional lighting, tactile atmospheric grain. Cinematic Neo-Noir / Cyber-Samurai Anamorphic. Reflective snow crystals, sharp 5600K directional key with contre-jour rim lighting, crimson optical glare.\n\nSCENE: Scene scene-01 - Shot 2: Medium Reaction Shot (10s). Core narrative tension: One-armed warrior defending personal honor against synthetic corporate assassin.\n\nCHARACTERS: @ronin_yuki (Yuki the Ronin) in Charcoal weathered linen haori over Kevlar under-armor, left sleeve pinned neatly with brass buckle, frayed hem with frosted hemline. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.\n\nLOCATION: @snow_bamboo_grove (Snow-Covered Bamboo Forest). Vertical frozen green bamboo stalks at 1.5m spacing, 10cm fresh powder snow on dark frozen soil..\n\nFIRST FRAME AND SPATIAL BLOCKING:\nFirst-second holding beat: warrior centered at 2.0m medium framing, posture locked in foreground.\nSPATIAL BLOCKING & RADAR GEOMETRY (Lens: 35mm, Camera Move: Slow 35mm optical dolly track inward along eyeline):\n- Camera placement: at 0.45x, 0.25y [screen-center, background], 180° camera axis strictly respected.\n- @ronin_yuki position: screen-center in the midground (approx. 1.4m from lens), torso and eyeline oriented at 90° (camera-forward / downstage (90°)).\n- Prop @broken_blade: positioned at screen-center in the midground.\n\nSHOT SPECIFICATION: Shot 2 (Duration: 10s, Hard cut). Action beat: Infrared targeting beam sweeps across warrior's collarbone. -> Corneal catch-lights flare as pupils dilate; right thumb clicks tsuba guard open 3mm with tight grip..\n\nOPTICS / CAMERA:\nLENS LOCK: 35mm anamorphic prime lens, 84° field of view, zero focal length shift, cinematic depth-of-field compression, optical bokeh texture..\nSCREEN DIRECTION: Strict 180-degree camera axis enforced; eyeline locked toward screen-right..\nCamera Move: Slow 35mm optical dolly track inward along eyeline. Dynamic blocking, deep spatial relationship, actor moves through frame planes without optical cut.\n\nPHYSICS:\nCOUNT LOCK: Exactly 1 character in foreground frame..\nSTILLNESS LOCK: Shoulder strap and collar maintain rigid alignment without warping..\nMONOTONIC STATE: Infrared laser reflection on cheekbone persists monotonically across frame..\nGround-contact physics enforced: boots cast contact shadows.\n\nLIGHTING: Directional 5600K key lighting piercing through bamboo stalks with sharp 45° contre-jour rim light and deep shadow fill bounce.\n\nAUDIO: Voice Identity: Low gravelly cadence, measured pauses, sharp Japanese-phonetic consonant clarity, calm guttural pitch.\nLine: \"You came alone.\"\nFiller-Babble Fix: Nobody else speaks; other visible characters keep lips at rest, jaw closed, strictly silent listening beat after line is spoken. No ad-libs. SFX only. No background music. No subtitles.",
+      "compiled_15_block": "[01/15] GLOBAL_STYLE_PREFIX: Feature film cinematic capture, 2.39:1 CinemaScope, anamorphic optical texture with subtle horizontal breathing, low-key directional lighting, tactile atmospheric grain. Genre & Tone: Cinematic Neo-Noir / Cyber-Samurai Anamorphic. World Reality: Blizzard-swept mountain bamboo grove under heavy cyan dusk with high-contrast snow drift physics. Visual Motif: Reflective snow crystals, sharp 5600K directional key with contre-jour rim lighting, crimson optical glare.\n\n[02/15] POSITIVE_CONSTRAINTS: Exactly 1 characters in shot (@ronin_yuki). Exactly 1 primary prop (@broken_blade). Ground-contact physics enforced: boots cast dark contact shadows on floor.\n\n[03/15] CAMERA_PERSPECTIVE_AND_FOV: 84° Classic Wide / Cuarón Intimate (35mm). Optical characteristics: Dynamic blocking, deep spatial relationship, actor moves through frame planes without optical cut. Anamorphic prime with controlled bokeh. Lens lock: 35mm anamorphic prime lens, 84° field of view, zero focal length shift, cinematic depth-of-field compression, optical bokeh texture.. Banned: no mm focal length tags in action beats, no f-stop, no ISO, no shutter speed tags.\n\n[04/15] CAMERA_MOTION_AND_SPEED: Slow 35mm optical dolly track inward along eyeline. Zero handheld jitter, zero gimbal roll, stable fluid track.\n\n[05/15] LIGHTING_AND_COLOR_SCIENCE: Directional 5600K key lighting piercing through bamboo stalks with sharp 45° contre-jour rim light and deep shadow fill bounce. Deep shadow-side exposure with balanced fill bounce.\n\n[06/15] LOCATION_ENVIRONMENT_PLATE: @snow_bamboo_grove (Snow-Covered Bamboo Forest). Vertical frozen green bamboo stalks at 1.5m spacing, 10cm fresh powder snow on dark frozen soil.\n\n[07/15] SPATIAL_ANCHORS_AND_GEO: SPATIAL BLOCKING & RADAR GEOMETRY (Lens: 35mm, Camera Move: Slow 35mm optical dolly track inward along eyeline):\n- Camera placement: at 0.45x, 0.25y [screen-center, background], 180° camera axis strictly respected.\n- @ronin_yuki position: screen-center in the midground (approx. 1.4m from lens), torso and eyeline oriented at 90° (camera-forward / downstage (90°)).\n- Prop @broken_blade: positioned at screen-center in the midground.\n\n[08/15] CHARACTER_IDENTITY_AND_WARDROBE: @ronin_yuki (Yuki the Ronin) in Charcoal weathered linen haori over Kevlar under-armor, left sleeve pinned neatly with brass buckle, frayed hem with frosted hemline. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.\n\n[09/15] HERO_PROPS_AND_INTERACTION: Hold @broken_blade (Broken Tachi Blade) exactly where the red arrow points on the reference image, material: Forged folded tamahagane steel with chipped tip, micro-serrated fractured edge reflecting rim light, leather cord tsuka wrap., knuckles blanching white with applied grip torque.\n\n[10/15] MEISNER_OBJECTIVE_AND_BEHAVIOR: Objective: One-armed warrior defending personal honor against synthetic corporate assassin. Stimulus: Infrared targeting beam sweeps across warrior's collarbone.. Micro-action: Corneal catch-lights flare as pupils dilate; right thumb clicks tsuba guard open 3mm with tight grip.. Interrupted accent: hands freeze mid-motion as line delivers.\n\n[11/15] EYE_LIFE_AND_MICRO_EXPRESSIONS: Eyes execute human micro-saccades: one slow lazy blink at 01.2s -> quick double-blink at 04.5s -> hard reset-blink at 07.8s; eyes snap to target 0.4s before head rotates; moist corneal catch-lights catching rim light.\n\n[12/15] ACTION_TIMING_BEATS:\n- 0.0–1.0s: First-second stabilization beat: First-second holding beat: warrior centered at 2.0m medium framing, posture locked in foreground.\n- 1.0–4.0s: Stimulus occurs: Infrared targeting beam sweeps across warrior's collarbone.\n- 4.0–8.0s: Micro-action response: Corneal catch-lights flare as pupils dilate; right thumb clicks tsuba guard open 3mm with tight grip.\n- 8.0–10.0s: Dialogue delivery and holding beat: 'You came alone.' spoken with locked eyeline.\n\n[13/15] SEAM_STITCH_AND_FIRST_SECOND_WIDE: First-second stabilization beat active: First-second holding beat: warrior centered at 2.0m medium framing, posture locked in foreground. Dialogue tail stitched: \"You came alone.\" feeding into holding beat.\n\n[14/15] ISOLATED_AUDIO_AND_DIALOGUE: Voice: Low gravelly cadence, measured pauses, sharp Japanese-phonetic consonant clarity, calm guttural pitch. | Line: \"You came alone.\" | Filler-Babble Fix: Nobody else speaks; other visible characters keep lips at rest, jaw closed, strictly silent listening beat after line is spoken. No ad-libs. SFX only. No background music. No subtitles.\n\n[15/15] NEGATIVE_AND_ANTI_DRIFT_LOCKS: No morphing fingers, no floating boots, no teleporting actors, no crossing 180 axis, no extra limbs, no unprompted smiles, no dead flat eyes, no double suns.",
+      "qa_passed": true,
+      "iteration_count": 0,
+      "rescue_history": [],
+      "status": "draft"
+    },
+    {
+      "shot_id": "shot-03",
+      "scene_id": "scene-01",
+      "order": 3,
+      "title": "Extreme Close-Up Climax",
+      "duration_sec": 10,
+      "camera_lens_mm": 85,
+      "camera_move": "Locked-off 85mm anamorphic portrait framing",
+      "spatial_nodes": [
+        {
+          "id": "cam",
+          "handle": "camera",
+          "role": "camera",
+          "x": 0.5,
+          "y": 0.35,
+          "facing_deg": 0.0
+        },
+        {
+          "id": "sub1",
+          "handle": "@ronin_yuki",
+          "role": "subject",
+          "x": 0.5,
+          "y": 0.55,
+          "facing_deg": 90.0
+        }
+      ],
+      "meisner_stimulus": "High-frequency blade hum vibrates through freezing air.",
+      "meisner_micro_action": "Eyes execute timed saccade to blade tip; jaw muscles clench as hands freeze with thumb grip on wrap.",
+      "dialogue_line": "Draw.",
+      "continuity_locks": {
+        "first_frame_lock": "First-second stabilization beat: tight 85mm portrait frame locked on jawline and corneal reflection at 1.2m.",
+        "screen_direction_lock": "Strict 180-degree line respected; profile angled 30 degrees toward screen-right.",
+        "lens_lock": "85mm anamorphic portrait prime, 29° field of view, extreme shallow depth-of-field compression, optical bokeh texture.",
+        "count_lock": "Exactly 1 character in extreme close-up.",
+        "stillness_lock": "Facial structure remains rigid with micro-tension; zero head wobble.",
+        "monotonic_state_notes": "Exhaled steam condensation on lips persists monotonically across frame."
+      },
+      "precomp_image_path": null,
+      "animatic_slate_path": "projects\\demo-hell-grind\\renders\\shot-03_slate.png",
+      "animatic_Drop_path": null,
+      "compiled_10_section": "GLOBAL STYLE: Feature film cinematic capture, 2.39:1 CinemaScope, anamorphic optical texture with subtle horizontal breathing, low-key directional lighting, tactile atmospheric grain. Cinematic Neo-Noir / Cyber-Samurai Anamorphic. Reflective snow crystals, sharp 5600K directional key with contre-jour rim lighting, crimson optical glare.\n\nSCENE: Scene scene-01 - Shot 3: Extreme Close-Up Climax (10s). Core narrative tension: One-armed warrior defending personal honor against synthetic corporate assassin.\n\nCHARACTERS: @ronin_yuki (Yuki the Ronin) in Charcoal weathered linen haori over Kevlar under-armor, left sleeve pinned neatly with brass buckle, frayed hem with frosted hemline. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.\n\nLOCATION: @snow_bamboo_grove (Snow-Covered Bamboo Forest). Vertical frozen green bamboo stalks at 1.5m spacing, 10cm fresh powder snow on dark frozen soil..\n\nFIRST FRAME AND SPATIAL BLOCKING:\nFirst-second stabilization beat: tight 85mm portrait frame locked on jawline and corneal reflection at 1.2m.\nSPATIAL BLOCKING & RADAR GEOMETRY (Lens: 85mm, Camera Move: Locked-off 85mm anamorphic portrait framing):\n- Camera placement: at 0.50x, 0.35y [screen-center, midground], 180° camera axis strictly respected.\n- @ronin_yuki position: screen-center in the midground (approx. 0.9m from lens), torso and eyeline oriented at 90° (camera-forward / downstage (90°)).\n\nSHOT SPECIFICATION: Shot 3 (Duration: 10s, Hard cut). Action beat: High-frequency blade hum vibrates through freezing air. -> Eyes execute timed saccade to blade tip; jaw muscles clench as hands freeze with thumb grip on wrap..\n\nOPTICS / CAMERA:\nLENS LOCK: 85mm anamorphic portrait prime, 29° field of view, extreme shallow depth-of-field compression, optical bokeh texture..\nSCREEN DIRECTION: Strict 180-degree line respected; profile angled 30 degrees toward screen-right..\nCamera Move: Locked-off 85mm anamorphic portrait framing. Cinematic portrait separation, gentle background softening, natural face proportion without wide-angle bulb nose.\n\nPHYSICS:\nCOUNT LOCK: Exactly 1 character in extreme close-up..\nSTILLNESS LOCK: Facial structure remains rigid with micro-tension; zero head wobble..\nMONOTONIC STATE: Exhaled steam condensation on lips persists monotonically across frame..\nGround-contact physics enforced: boots cast contact shadows.\n\nLIGHTING: Directional 5600K key lighting piercing through bamboo stalks with sharp 45° contre-jour rim light and deep shadow fill bounce.\n\nAUDIO: Voice Identity: Low gravelly cadence, measured pauses, sharp Japanese-phonetic consonant clarity, calm guttural pitch.\nLine: \"Draw.\"\nFiller-Babble Fix: Nobody else speaks; other visible characters keep lips at rest, jaw closed, strictly silent listening beat after line is spoken. No ad-libs. SFX only. No background music. No subtitles.",
+      "compiled_15_block": "[01/15] GLOBAL_STYLE_PREFIX: Feature film cinematic capture, 2.39:1 CinemaScope, anamorphic optical texture with subtle horizontal breathing, low-key directional lighting, tactile atmospheric grain. Genre & Tone: Cinematic Neo-Noir / Cyber-Samurai Anamorphic. World Reality: Blizzard-swept mountain bamboo grove under heavy cyan dusk with high-contrast snow drift physics. Visual Motif: Reflective snow crystals, sharp 5600K directional key with contre-jour rim lighting, crimson optical glare.\n\n[02/15] POSITIVE_CONSTRAINTS: Exactly 1 characters in shot (@ronin_yuki). Exactly 1 primary prop (@broken_blade). Ground-contact physics enforced: boots cast dark contact shadows on floor.\n\n[03/15] CAMERA_PERSPECTIVE_AND_FOV: 29° Short Telephoto Portrait (85mm). Optical characteristics: Cinematic portrait separation, gentle background softening, natural face proportion without wide-angle bulb nose. Anamorphic prime with controlled bokeh. Lens lock: 85mm anamorphic portrait prime, 29° field of view, extreme shallow depth-of-field compression, optical bokeh texture.. Banned: no mm focal length tags in action beats, no f-stop, no ISO, no shutter speed tags.\n\n[04/15] CAMERA_MOTION_AND_SPEED: Locked-off 85mm anamorphic portrait framing. Zero handheld jitter, zero gimbal roll, stable fluid track.\n\n[05/15] LIGHTING_AND_COLOR_SCIENCE: Directional 5600K key lighting piercing through bamboo stalks with sharp 45° contre-jour rim light and deep shadow fill bounce. Deep shadow-side exposure with balanced fill bounce.\n\n[06/15] LOCATION_ENVIRONMENT_PLATE: @snow_bamboo_grove (Snow-Covered Bamboo Forest). Vertical frozen green bamboo stalks at 1.5m spacing, 10cm fresh powder snow on dark frozen soil.\n\n[07/15] SPATIAL_ANCHORS_AND_GEO: SPATIAL BLOCKING & RADAR GEOMETRY (Lens: 85mm, Camera Move: Locked-off 85mm anamorphic portrait framing):\n- Camera placement: at 0.50x, 0.35y [screen-center, midground], 180° camera axis strictly respected.\n- @ronin_yuki position: screen-center in the midground (approx. 0.9m from lens), torso and eyeline oriented at 90° (camera-forward / downstage (90°)).\n\n[08/15] CHARACTER_IDENTITY_AND_WARDROBE: @ronin_yuki (Yuki the Ronin) in Charcoal weathered linen haori over Kevlar under-armor, left sleeve pinned neatly with brass buckle, frayed hem with frosted hemline. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.. Headless sheet consistency verified: facial features sampled strictly from 3/4 close-up sheet.\n\n[09/15] HERO_PROPS_AND_INTERACTION: Hold @broken_blade (Broken Tachi Blade) exactly where the red arrow points on the reference image, material: Forged folded tamahagane steel with chipped tip, micro-serrated fractured edge reflecting rim light, leather cord tsuka wrap., knuckles blanching white with applied grip torque.\n\n[10/15] MEISNER_OBJECTIVE_AND_BEHAVIOR: Objective: One-armed warrior defending personal honor against synthetic corporate assassin. Stimulus: High-frequency blade hum vibrates through freezing air.. Micro-action: Eyes execute timed saccade to blade tip; jaw muscles clench as hands freeze with thumb grip on wrap.. Interrupted accent: hands freeze mid-motion as line delivers.\n\n[11/15] EYE_LIFE_AND_MICRO_EXPRESSIONS: Eyes execute human micro-saccades: one slow lazy blink at 01.2s -> quick double-blink at 04.5s -> hard reset-blink at 07.8s; eyes snap to target 0.4s before head rotates; moist corneal catch-lights catching rim light.\n\n[12/15] ACTION_TIMING_BEATS:\n- 0.0–1.0s: First-second stabilization beat: First-second stabilization beat: tight 85mm portrait frame locked on jawline and corneal reflection at 1.2m.\n- 1.0–4.0s: Stimulus occurs: High-frequency blade hum vibrates through freezing air.\n- 4.0–8.0s: Micro-action response: Eyes execute timed saccade to blade tip; jaw muscles clench as hands freeze with thumb grip on wrap.\n- 8.0–10.0s: Dialogue delivery and holding beat: 'Draw.' spoken with locked eyeline.\n\n[13/15] SEAM_STITCH_AND_FIRST_SECOND_WIDE: First-second stabilization beat active: First-second stabilization beat: tight 85mm portrait frame locked on jawline and corneal reflection at 1.2m. Dialogue tail stitched: \"Draw.\" feeding into holding beat.\n\n[14/15] ISOLATED_AUDIO_AND_DIALOGUE: Voice: Low gravelly cadence, measured pauses, sharp Japanese-phonetic consonant clarity, calm guttural pitch. | Line: \"Draw.\" | Filler-Babble Fix: Nobody else speaks; other visible characters keep lips at rest, jaw closed, strictly silent listening beat after line is spoken. No ad-libs. SFX only. No background music. No subtitles.\n\n[15/15] NEGATIVE_AND_ANTI_DRIFT_LOCKS: No morphing fingers, no floating boots, no teleporting actors, no crossing 180 axis, no extra limbs, no unprompted smiles, no dead flat eyes, no double suns.",
+      "qa_passed": true,
+      "iteration_count": 0,
+      "rescue_history": [],
+      "status": "draft"
+    }
+  ],
+  "gates": {
+    "story_funnel": "approved",
+    "asset_bible": "approved",
+    "storyboard_blocking": "pending",
+    "final_render": "pending"
+  },
+  "created_at": "2026-10-16T08:20:33.210492+00:00",
+  "updated_at": "2026-10-16T08:20:33.458723+00:00"
+}
